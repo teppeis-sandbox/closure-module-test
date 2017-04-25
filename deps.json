@@ -1,0 +1,1 @@
+[{"name":"$singleton$","dependencies":[],"transitive-dependencies":[],"inputs":["src/es6/bar.js","src/es6/foo.js","src/es6/baz.js"]}]

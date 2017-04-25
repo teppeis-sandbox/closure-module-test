@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "es6": "closure-compiler --language_in ES6 --language_out ES5 -O SIMPLE --formatting PRETTY_PRINT --dependency_mode STRICT --entry_point src/es6/baz.js --js src/es6/* > dest/es6.js"
   },
   "keywords": [],
   "author": "Teppei Sato <teppeis@gmail.com>",
