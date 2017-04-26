@@ -4,12 +4,17 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "es6": "closure-compiler --language_in ES6 --language_out ES5_STRICT -O SIMPLE --formatting PRETTY_PRINT --dependency_mode STRICT --entry_point src/es6/baz.js --js src/es6/* > dest/es6.js"
+    "es6": "closure-compiler --language_in ES6 --language_out ES5_STRICT -O SIMPLE --formatting PRETTY_PRINT --dependency_mode STRICT --module_resolution NODE --entry_point src/es6/baz.js --js src/es6/* > dest/es6.js",
+    "es6:ao": "closure-compiler --language_in ES6 --language_out ES5_STRICT -O ADVANCED --formatting PRETTY_PRINT --dependency_mode STRICT --module_resolution NODE --entry_point src/es6/baz.js --js src/es6/* > dest/es6-ao.js",
+    "es6:node": "closure-compiler --language_in ES6 --language_out ES5_STRICT -O ADVANCED --formatting PRETTY_PRINT --dependency_mode STRICT --module_resolution NODE --entry_point src/es6/baz.js --js src/es6/* --js node_modules/* > dest/es6-node.js",
+    "bundle": "browserify dest/es6-ao.js > dest/es6-ao.bundle.js"
   },
   "keywords": [],
   "author": "Teppei Sato <teppeis@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "closure-compiler-cli": "^1.0.2"
+    "browserify": "^14.3.0",
+    "closure-compiler-cli": "^1.0.2",
+    "whilst": "^1.0.2"
   }
 }
